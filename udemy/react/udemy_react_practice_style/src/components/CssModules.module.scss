@@ -7,3 +7,19 @@
     justify-content: center;
     align-items: center;
 }
+.title {
+    color: #3d84a8;
+    margin: 0;
+    line-height: 1.5;
+}
+.button {
+    background-color: #abedd8;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    &:hover {
+        background-color: #46cdcf;
+        color: #fff;
+        cursor: pointer;
+    }
+}
