@@ -2,13 +2,10 @@ import PropTypes from "prop-types";
 import styled from "styled-components"
 
 export const Card = (props) => {
-    const { key, name, src } = props;
-    console.log(src);
-    console.log(key);
-    console.log(props);
+    const { name, src } = props;
     
     return(
-        <SCard id={key}>
+        <SCard>
             <SImg src={src} alt={name} />
             <SName>{name}</SName>
         </SCard>

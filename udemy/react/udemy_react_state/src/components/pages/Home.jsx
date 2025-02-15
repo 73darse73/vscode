@@ -1,12 +1,14 @@
 import { DefaultLayout } from "../templates/DefaultLayout"
 import { SecondaryButton } from "../atoms/button/SecondaryButton"
+import { useNavigate } from "react-router-dom"
 
 export const Home = () => {
+    const navigate = useNavigate();
     const onClickAdmin = () => {
-        history.pushState({ pathname: "/users", state: { isAdmin: true }})
+        navigate("/userlist", {state: { isAdmin: true }})
     };
     const onClickGeneral = () => {
-        history.pushState({ pathname: "/users", state: { isAdmin: false }})
+        navigate("/userlist", {state: { isAdmin: false }})
     };
     return(
         <DefaultLayout>
