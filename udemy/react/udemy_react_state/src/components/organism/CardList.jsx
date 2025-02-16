@@ -15,14 +15,12 @@ console.log(users);
 export const CardList = () => {
     const { state } = useLocation();
     const isAdmin = state ? state.isAdmin : false;
-    console.log(isAdmin);
-    
     
     return(
         <>
             { users.map((user) => {
                 return( 
-                    <Card key={user.key} name={user.name} src={user.src}/>
+                    <Card key={user.key} name={user.name} src={user.src} isAdmin={isAdmin}/>
                 )
             })}
         </>
