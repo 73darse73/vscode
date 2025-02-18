@@ -1,14 +1,20 @@
 import { DefaultLayout } from "../templates/DefaultLayout"
 import { SecondaryButton } from "../atoms/button/SecondaryButton"
 import { useNavigate } from "react-router-dom"
+import { UserContext } from "../../providers/UserContext"
+import { useContext } from "react"
 
 export const Home = () => {
     const navigate = useNavigate();
+    const { setUserInfo } = useContext(UserContext);
+
     const onClickAdmin = () => {
-        navigate("/userlist", {state: { isAdmin: true }})
+        setUserInfo({ isAdmin: true });
+        navigate("/userlist")
     };
     const onClickGeneral = () => {
-        navigate("/userlist", {state: { isAdmin: false }})
+        setUserInfo({ isAdmin: false });
+        navigate("/userlist")
     };
     return(
         <DefaultLayout>

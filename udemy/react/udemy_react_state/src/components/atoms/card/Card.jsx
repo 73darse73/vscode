@@ -1,9 +1,13 @@
 import PropTypes from "prop-types";
-import styled from "styled-components"
+import { UserContext } from "../../../providers/UserContext";
+import { useContext } from "react";
+import styled from "styled-components";
 
 export const Card = (props) => {
-    const { name, src, isAdmin } = props;
-    
+    const { name, src } = props;
+    const { userInfo } = useContext(UserContext);
+    const isAdmin = userInfo ? userInfo.isAdmin : false;
+
     return(
         <SCard>
             <SImg src={src} alt={name} />

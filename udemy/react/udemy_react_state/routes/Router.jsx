@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { Home } from "./src/components/pages/Home"
-import { UserList } from "./src/components/pages/UserList"
+import { Home } from "../src/components/pages/Home"
+import { UserList } from "../src/components/pages/UserList"
 
 export const Router = () => {
     return (
