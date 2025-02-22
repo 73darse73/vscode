@@ -8,8 +8,6 @@ const users = [...Array(10).keys()].map((val) => {
     }
 })
 
-console.log(users);
-
 
 export const CardList = () => {
     
